@@ -2,7 +2,7 @@ version: 2.1
 workflows:
   test_deploy:
     jobs:
-      - python_project
+      - python_setup
 
 jobs:
   python_setup:
