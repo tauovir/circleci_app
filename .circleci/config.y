@@ -2,17 +2,17 @@ version: 2.1
 workflows:
   test_deploy:
     jobs:
-      - python_project
+      - python_setup
 
 jobs:
-  python_project:
+  python_setup:
     docker:
       - image: cimg/python:3.10.0
     steps:
       - checkout
       - run:
           name: Install pandas
-          command: pip -r requirement.txt
+          command: pip install pandas
       - run:
           name: Install Numpy
           command: pip install numpy
